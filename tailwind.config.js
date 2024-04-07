@@ -10,7 +10,7 @@ export default {
     extend: {
       colors: {
         "black-one": "#383838",
-        "black-two": "#2b2b2c",
+        "black-two": "#2B2B2C",
         "black-main-one": "#202022",
         "black-main-two": "#1E1E1F",
         "white-one": "#ffffff",
