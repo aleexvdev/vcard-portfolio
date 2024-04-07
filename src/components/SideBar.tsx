@@ -29,7 +29,7 @@ export const SideBar = () => {
           <p className="bg-black-two rounded-lg text-white-one text-sm font-light mx-auto px-3 py-2 w-max mb-4">
             Full Stack Developer
           </p>
-          <ul className="w-full flex items-center justify-center gap-4">
+          <ul className="w-full flex items-center justify-center gap-4 py-2">
             {
               socials.map( (social) => (
                 <BtnSocial key={social.id} props={social} />
@@ -38,7 +38,7 @@ export const SideBar = () => {
           </ul>
         </div>
         <div className="w-full h-full">
-          <div className="w-full h-[1px] my-8 bg-black-one"></div>
+          <div className="w-full h-[1px] mt-4 mb-6 bg-black-one"></div>
           <div className="w-full h-auto grid grid-cols-1 gap-y-5">
             <Tooltip message="Birthday">
               <div className="w-full flex items-center justify-start gap-2">
