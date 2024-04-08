@@ -9,7 +9,8 @@ import { Tooltip } from "./common/Tooltip/Tooltip";
 
 export const SideBar = () => {
   return (
-    <div className="sticky w-auto h-full min-w-1/4 bg-black-main-two rounded-3xl mb-0 z-50 border border-black-one"
+    <div 
+      className="sticky w-auto h-full bg-black-main-two rounded-3xl mb-0 z-40 border border-black-one"
       style={{ 
         boxShadow: "0 24px 80px hsla(0, 0%, 0%, 0.25)" 
       }}

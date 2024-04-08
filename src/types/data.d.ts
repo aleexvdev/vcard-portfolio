@@ -3,3 +3,8 @@ export type TypeSocial = {
   name: string;
   url: string;
 }
+
+export type TypeNavs = {
+  title: string;
+  path: string;
+}
