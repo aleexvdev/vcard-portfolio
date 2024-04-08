@@ -2,13 +2,23 @@ import { useState } from "react";
 import { SideBar } from "./components/SideBar"
 import { NavBar } from "./components/common/NavBar/NavBar";
 import { AboutPage } from "./page/AboutPage";
+import { PortfolioPage } from "./page/PortfolioPage";
+import { ResumePage } from "./page/ResumePage";
+import { ContactPage } from "./page/ContactPage";
 
 function App() {
 
-  const [titlePage, setTitlePage] = useState<string>('About Me');
+  const [currentPage, setCurrentPage] = useState<string>("About");
+
+  const pageComponents: { [key: string]: React.ReactNode } = {
+    About: <AboutPage title="About Me" />,
+    Resume: <ResumePage title="Resume" />,
+    Portfolio: <PortfolioPage title="Portfolio" />,
+    Contact: <ContactPage title="Contact" />,
+  };
 
   const handleTitle = (title: string) => {
-    setTitlePage(title)
+    setCurrentPage(title)
   }
 
   return (
@@ -23,7 +33,7 @@ function App() {
         >
           <article className="w-full h-full p-4 min-h-full">
             <NavBar handleTitle={handleTitle} />
-            <AboutPage title={titlePage} />
+            {pageComponents[currentPage]}
           </article>
         </article>
       </div>
