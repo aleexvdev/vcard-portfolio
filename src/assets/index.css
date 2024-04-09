@@ -35,3 +35,22 @@ main { margin-bottom: 60px; }
   border-radius: 30px;
 }
 
+.service-item {
+  background:  linear-gradient(
+    to bottom right, 
+    hsl(0, 0%, 25%) 0%, 
+    hsla(0, 0%, 25%, 0) 50%
+  );
+}
+
+.service-item::before {
+  background: linear-gradient(
+    to bottom right, 
+    hsla(240, 1%, 18%, 0.251) 0%, 
+    hsla(240, 2%, 11%, 0) 100%
+  ), hsl(240, 2%, 13%);
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  z-index: -1;
+}

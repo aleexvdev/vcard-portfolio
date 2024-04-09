@@ -8,3 +8,8 @@ export type TypeNavs = {
   title: string;
   path: string;
 }
+
+export type TypeServices = {
+  service: string;
+  description: string;
+}

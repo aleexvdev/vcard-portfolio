@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { TypeSocial } from '../../../types/data';
 import { MdFacebook } from "react-icons/md";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 interface BtnSocialProps {
   props: TypeSocial;
@@ -26,12 +27,12 @@ export const BtnSocial = ({ props }: BtnSocialProps) => {
   const { name, url } = props;
 
   return (
-    <a href={url} target="_blank" rel="noopener noreferrer">
+    <Link to={url} target="_blank" rel="noopener noreferrer">
       <motion.button
         className="bg-transparent"
       >
         {iconCategory(name)}
       </motion.button>
-    </a>
+    </Link>
   );
 }

@@ -20,7 +20,7 @@ export const NavBar = ({ handleTitle }: NavBarProps) => {
           navs.map((nav, index) => (
             <button
               key={index}
-              className={`bg-transparent text-sm font-medium ${
+              className={`bg-transparent text-lg font-medium ${
                 activeNav === nav.path ? 'text-orange-yellow-crayola' : 'text-light-gray hover:text-light-gray-70'
               }`}
               onClick={() => handleNavActive(nav.path)}
