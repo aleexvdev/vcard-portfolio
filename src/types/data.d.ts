@@ -13,3 +13,9 @@ export type TypeServices = {
   service: string;
   description: string;
 }
+
+export type TypeEducation = {
+  place: string;
+  period: string;
+  description: string;
+}

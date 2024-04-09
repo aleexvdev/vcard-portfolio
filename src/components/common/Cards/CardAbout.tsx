@@ -1,4 +1,4 @@
-import { TypeServices } from '../../types/data'
+import { TypeServices } from '../../../types/data'
 import { HiOutlineDevicePhoneMobile } from 'react-icons/hi2';
 import { TbDeviceImacCode } from 'react-icons/tb';
 import { VscTools } from 'react-icons/vsc';
@@ -28,7 +28,7 @@ export const CardAbout = ({ props }: CardAboutProps) => {
   const { service, description } = props;
 
   return (
-    <div className='w-full p-5 rounded-xl border border-orange-yellow-crayola/20' style={{ boxShadow: "0 16px 30px hsla(0, 0%, 0%, 0.25)" }}>
+    <div className='w-full p-5 rounded-xl bg-black-main-one border border-orange-yellow-crayola/20' style={{ boxShadow: "0 16px 30px hsla(0, 0%, 0%, 0.25)" }}>
       <div className='w-full flex items-center justify-center'>
         <div className='w-20'>
           { iconService(service) }
