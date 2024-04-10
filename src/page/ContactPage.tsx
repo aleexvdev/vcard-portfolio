@@ -47,8 +47,8 @@ export const ContactPage = ({ title }: ContactPageProps) => {
             </div>
             <textarea name="" id="" className='resize-none min-h-32 text-white-two font-normal outline-none w-full rounded-xl text-lg border border-black-one bg-transparent p-5' placeholder='Your Message'></textarea>
             <div className='w-full flex items-center justify-end mt-5'>
-              <button type='submit' className='flex items-center justify-center px-3 shadow-sm shadow-orange-yellow-crayola rounded-lg py-2 gap-3 bg-black-main-one'>
-                <BsFillSendFill className='w-6 h-6 text-orange-yellow-crayola' /> 
+              <button type='submit' className='flex items-center justify-center px-5 shadow-sm shadow-black-main-one rounded-xl py-3 gap-3 bg-black-two hover:bg-black-one'>
+                <BsFillSendFill className='w-5 h-5 text-orange-yellow-crayola' /> 
                 <span className='text-orange-yellow-crayola text-lg capitalize'>Send Message</span>
               </button>
             </div>

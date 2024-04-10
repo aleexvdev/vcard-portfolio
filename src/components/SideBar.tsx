@@ -67,9 +67,9 @@ export const SideBar = () => {
             </Tooltip>
           </div>
           <div className="w-full flex items-center justify-center my-8">
-            <button className="bg-black-two hover:bg-black-one flex items-center justify-center gap-2 px-4 py-2 rounded-md overflow-hidden">
-              <MdOutlineFileDownload className="w-6 h-6 text-white-one" />
-              <span className="text-white-one text-sm">Download CV</span>
+            <button className="flex items-center justify-center px-5 shadow-sm shadow-black-main-one rounded-xl py-3 gap-3 bg-black-two hover:bg-black-one">
+              <MdOutlineFileDownload className="w-6 h-6 text-orange-yellow-crayola" />
+              <span className="text-orange-yellow-crayola text-sm">Download CV</span>
             </button>
           </div>
         </div>
