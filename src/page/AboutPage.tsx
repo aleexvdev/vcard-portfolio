@@ -21,7 +21,7 @@ export const AboutPage = ({ title }: AboutPageProps) => {
         </div>
       </section>
       <section className='py-3'>
-        <h3 className='text-white-two capitalize font-medium text-2xl'>What I'm doing</h3>
+        <h3 className='text-white-two capitalize font-semibold text-2xl'>What I'm doing</h3>
         <div className='py-5 w-full grid grid-cols-2 gap-5'>
           {
             services.map((item, key) => (
@@ -31,7 +31,7 @@ export const AboutPage = ({ title }: AboutPageProps) => {
         </div>
       </section>
       <section className='py-3'>
-        <h3 className='text-white-two capitalize font-medium text-2xl'>My Skills</h3>
+        <h3 className='text-white-two capitalize font-semibold text-2xl'>My Skills</h3>
         <div>...</div>
       </section>
     </article>
