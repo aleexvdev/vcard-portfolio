@@ -17,4 +17,10 @@ export const navs: TypeNavs[] = [
     title: "Contact",
     path: "Contact"
   }
-]
+];
+
+export const filterProjects: string[] = [
+  "All",
+  "Applications",
+  "Web development"
+]; 

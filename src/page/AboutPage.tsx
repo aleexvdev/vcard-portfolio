@@ -1,6 +1,7 @@
 import { CardAbout } from '../components/common/Cards/CardAbout';
 import { Header } from '../components/common/Header/Header';
-import { services } from '../data/data';
+import { Tooltip } from '../components/common/Tooltip/Tooltip';
+import { services, skills } from '../data/data';
 
 interface AboutPageProps {
   title: string;
@@ -15,9 +16,6 @@ export const AboutPage = ({ title }: AboutPageProps) => {
           <p className='mb-7'>
             Full-Stack Developer with experience in building robust and scalable web applications. Passionate about technological innovation, I stay up-to-date with the latest trends and tools, enabling me to deliver cutting-edge and efficient solutions. My focus is on writing clean, modular, and easily maintainable code, following best programming practices.
           </p>
-          {/* <p>
-            Throughout my career, I have developed solid skills in technologies such as PHP, Laravel, JavaScript, React, Redux, HTML, CSS, and relational databases. I excel at creatively and effectively solving complex problems, always striving to optimize performance and user experience. Additionally, I possess excellent communication and teamwork abilities, allowing me to collaborate closely with designers, developers, and stakeholders to deliver successful projects that meet business objectives.
-          </p> */}
         </div>
       </section>
       <section className='py-3'>
@@ -32,7 +30,17 @@ export const AboutPage = ({ title }: AboutPageProps) => {
       </section>
       <section className='py-3'>
         <h3 className='text-white-two capitalize font-semibold text-2xl'>My Skills</h3>
-        <div>...</div>
+        <div className='w-full flex items-center justify-center my-10'>
+          {
+            skills.map((item, key) => (
+              <Tooltip key={key} message={item.skill}>
+                <figure>
+                  <img src={item.image} alt={item.skill} className='min-w-10 px-5 py-2'/>
+                </figure>
+              </Tooltip>
+            ))
+          }
+        </div>
       </section>
     </article>
   )
