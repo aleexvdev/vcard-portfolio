@@ -10,7 +10,7 @@ export const ListResume = ({ props }: ListResumeProps) => {
 
   return (
     <div className="timeline-item">
-      <h4 className="text-white-two font-medium capitalize text-base lg:text-lg mb-2">{place}</h4>
+      <h4 className="text-white-two font-medium capitalize text-base lg:text-base mb-2">{place}</h4>
       <span className="text-vegas-gold font-normal leading-4 mb-3 text-sm lg:text-base">{period}</span>
       <p className="text-light-gray font-light leading-6 text-sm lg:text-base">{description}</p>
     </div>
