@@ -63,33 +63,33 @@ export const SideBar = () => {
           <div className="w-full h-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-y-5 px-0 lg:px-0">
             <Tooltip message="Birthday">
               <div className="w-full flex items-center justify-start lg:justify-start gap-2">
-                <CiCalendar className="w-10 h-10 lg:w-7 lg:h-7 text-orange-yellow-crayola" />
-                <p className="text-white-two font-light text-xl md:text-lg lg:text-sm">January 06</p>
+                <CiCalendar className="w-6 h-6 text-orange-yellow-crayola" />
+                <p className="text-white-two font-light text-sm md:text-lg lg:text-sm">January 06</p>
               </div>
             </Tooltip>
             <Tooltip message="E-mail">
               <div className="w-full flex items-center justify-start lg:justify-start gap-2">
-                <PiAt className="w-10 h-10 lg:w-7 lg:h-7 text-orange-yellow-crayola" />
-                <p className="text-white-two font-light text-xl md:text-lg lg:text-sm" data-toggle="tooltip" data-original-title="Phone" data-placement="top">valverdealex25@gmail.com</p>
+                <PiAt className="w-6 h-6 text-orange-yellow-crayola" />
+                <p className="text-white-two font-light text-sm md:text-lg lg:text-sm" data-toggle="tooltip" data-original-title="Phone" data-placement="top">valverdealex25@gmail.com</p>
               </div>
             </Tooltip>
             <Tooltip message="Phone">
               <div className="w-full flex items-center justify-start lg:justify-start gap-2">
-                <BsPhone className="w-10 h-10 lg:w-7 lg:h-7 text-orange-yellow-crayola" />
-                <p className="text-white-two font-light text-xl md:text-lg lg:text-sm">+51 968 702 950</p>
+                <BsPhone className="w-6 h-6 text-orange-yellow-crayola" />
+                <p className="text-white-two font-light text-sm md:text-lg lg:text-sm">+51 968 702 950</p>
               </div>
             </Tooltip>
             <Tooltip message="Location">
               <div className="w-full flex items-center justify-start lg:justify-start gap-2">
-                <CiLocationOn className="w-10 h-10 lg:w-7 lg:h-7 text-orange-yellow-crayola" />
-                <p className="text-white-two font-light text-xl md:text-lg lg:text-sm">Lima, Perú</p>
+                <CiLocationOn className="w-6 h-6 text-orange-yellow-crayola" />
+                <p className="text-white-two font-light text-sm md:text-lg lg:text-sm">Lima, Perú</p>
               </div>
             </Tooltip>
           </div>
-          <div className="w-full flex items-center justify-center my-8">
+          <div className="w-full flex items-center justify-center mt-8 mb-3">
             <button className="flex items-center justify-center px-5 shadow-sm shadow-black-main-one rounded-xl py-3 gap-3 bg-black-two hover:bg-black-one">
-              <MdOutlineFileDownload className="w-10 h-10 lg:w-7 lg:h-7 text-orange-yellow-crayola" />
-              <span className="text-orange-yellow-crayola text-xl md:text-lg lg:text-sm">Download CV</span>
+              <MdOutlineFileDownload className="w-6 h-6 text-orange-yellow-crayola" />
+              <span className="text-orange-yellow-crayola text-sm md:text-lg lg:text-sm">Download CV</span>
             </button>
           </div>
         </div>
