@@ -16,7 +16,7 @@ export const ResumePage = ({ title }: ResumePageProps) => {
           <div className='w-12 h-12 bg-black-main-one flex items-center rounded-2xl justify-center shadow-sm shadow-orange-yellow-crayola'>
             <PiGraduationCapFill className='w-6 h-6 text-orange-yellow-crayola bg-transparent' />
           </div>
-          <h3 className='text-white-two capitalize text-xl lg:text-2xl font-semibold'>Education</h3>
+          <h3 className='text-white-two capitalize text-xl md:text-2xl font-semibold'>Education</h3>
         </div>
         <div className='w-full pl-14 pt-7'>
           {
@@ -31,7 +31,7 @@ export const ResumePage = ({ title }: ResumePageProps) => {
           <div className='w-12 h-12 bg-black-main-one flex items-center rounded-2xl justify-center shadow-sm shadow-orange-yellow-crayola'>
             <PiBriefcase className='w-6 h-6 text-orange-yellow-crayola bg-transparent' />
           </div>
-          <h3 className='text-white-two capitalize text-xl lg:text-2xl font-semibold'>Experience</h3>
+          <h3 className='text-white-two capitalize text-xl md:text-2xl font-semibold'>Experience</h3>
         </div>
         <div className='w-full pl-14 pt-7'>
           {

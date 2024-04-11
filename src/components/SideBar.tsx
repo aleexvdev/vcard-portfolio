@@ -38,7 +38,7 @@ export const SideBar = () => {
           </figure>
           <div className="w-full h-full flex flex-col items-center justify-center lg:items-center lg:justify-center lg:mt-5">
             <div className="w-full text-left">
-              <h1 className="text-white-two text-base lg:text-2xl font-medium md:whitespace-nowrap md:text-center mb-1 md:mb-2 lg:mb-4 lg:mt-0">
+              <h1 className="text-white-two text-base md:text-xl lg:text-2xl font-medium md:whitespace-nowrap mb-1 md:mb-2 lg:mb-4 lg:mt-0">
                 Alexander Valverde
               </h1>
             </div>
@@ -64,32 +64,32 @@ export const SideBar = () => {
             <Tooltip message="Birthday">
               <div className="w-full flex items-center justify-start lg:justify-start gap-2">
                 <CiCalendar className="w-6 h-6 text-orange-yellow-crayola" />
-                <p className="text-white-two font-light text-sm md:text-lg lg:text-sm">January 06</p>
+                <p className="text-white-two font-light text-sm md:text-base lg:text-sm">January 06</p>
               </div>
             </Tooltip>
             <Tooltip message="E-mail">
               <div className="w-full flex items-center justify-start lg:justify-start gap-2">
                 <PiAt className="w-6 h-6 text-orange-yellow-crayola" />
-                <p className="text-white-two font-light text-sm md:text-lg lg:text-sm" data-toggle="tooltip" data-original-title="Phone" data-placement="top">valverdealex25@gmail.com</p>
+                <p className="text-white-two font-light text-sm md:text-base lg:text-sm" data-toggle="tooltip" data-original-title="Phone" data-placement="top">valverdealex25@gmail.com</p>
               </div>
             </Tooltip>
             <Tooltip message="Phone">
               <div className="w-full flex items-center justify-start lg:justify-start gap-2">
                 <BsPhone className="w-6 h-6 text-orange-yellow-crayola" />
-                <p className="text-white-two font-light text-sm md:text-lg lg:text-sm">+51 968 702 950</p>
+                <p className="text-white-two font-light text-sm md:text-base lg:text-sm">+51 968 702 950</p>
               </div>
             </Tooltip>
             <Tooltip message="Location">
               <div className="w-full flex items-center justify-start lg:justify-start gap-2">
                 <CiLocationOn className="w-6 h-6 text-orange-yellow-crayola" />
-                <p className="text-white-two font-light text-sm md:text-lg lg:text-sm">Lima, Perú</p>
+                <p className="text-white-two font-light text-sm md:text-base lg:text-sm">Lima, Perú</p>
               </div>
             </Tooltip>
           </div>
-          <div className="w-full flex items-center justify-center mt-8 mb-3 lg:mb-6">
+          <div className="w-full flex items-center justify-center mt-8 mb-3 md:mb-6">
             <button className="flex items-center justify-center px-5 shadow-sm shadow-black-main-one rounded-xl py-3 gap-3 bg-black-two hover:bg-black-one">
               <MdOutlineFileDownload className="w-6 h-6 text-orange-yellow-crayola" />
-              <span className="text-orange-yellow-crayola text-sm md:text-lg lg:text-sm">Download CV</span>
+              <span className="text-orange-yellow-crayola text-sm md:text-base">Download CV</span>
             </button>
           </div>
         </div>
