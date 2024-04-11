@@ -7,7 +7,7 @@ interface TooltipProps {
 
 export const Tooltip = ({ message, children }: TooltipProps) => {
   return (
-    <div className="group relative flex">
+    <div className="group relative flex w-auto">
       {children}
       <span className="absolute -top-5 left-1/2 -translate-x-1/2 scale-0 transition-all rounded bg-black-two py-1 px-2 text-xs text-white group-hover:scale-100">
         {message}

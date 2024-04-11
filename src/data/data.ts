@@ -3,28 +3,23 @@ import { TypeEducation, TypeProjects, TypeServices, TypeSkills } from "../types/
 export const services: TypeServices[] = [
   {
     service: "Frontend Development",
-    description: "High-quality development of sites at the professional level.",
+    description: "Creación de sitios web modernos y atractivos, con enfoque en la experiencia del usuario. Dominio de tecnologías y buenas prácticas de desarrollo web.",
   },
   {
     service: "Backend Development",
-    description: "High-quality development of sites at the professional level.",
+    description: "Construcción de aplicaciones web sólidas y escalables. Manejo de bases de datos, lógica de negocio y APIs RESTful. Experiencia en entornos de producción.",
   },
   {
     service: "Mobile Development",
-    description: "Professional development of applications for iOS and Android.",
+    description: "Desarrollo de aplicaciones nativas para dispositivos iOS y Android. Interfaces intuitivas y fluidas, aprovechando las capacidades de los dispositivos móviles.",
   },
   {
     service: "Skills and Expertise",
-    description: "Proficient in varius programming languages, frameworks and tools.",
+    description: "Sólidos conocimientos en diversos lenguajes de programación, frameworks y herramientas. Pasión por el aprendizaje continuo y la adopción de nuevas tecnologías.",
   }
 ];
 
 export const education: TypeEducation[] = [
-  {
-    place: "Universidad Nacional José Faustino Sánchez Carrión",
-    period: "2016-2021",
-    description: "Bachiller en Ingeniería Informática"
-  },
   {
     place: "Universidad Nacional José Faustino Sánchez Carrión",
     period: "2016-2021",
@@ -52,6 +47,14 @@ export const experience: TypeEducation[] = [
 
 export const skills: TypeSkills[] = [
   {
+    skill: "Html",
+    image: "https://skillicons.dev/icons?i=html"
+  },
+  {
+    skill: "CSS",
+    image: "https://skillicons.dev/icons?i=css"
+  },
+  {
     skill: "JavaScript",
     image: "https://camo.githubusercontent.com/83332cff730c24fb7829ea5ff814d2629572848a0881cf9a60222ef296263782/68747470733a2f2f736b696c6c69636f6e732e6465762f69636f6e733f693d6a73"
   },
@@ -66,6 +69,38 @@ export const skills: TypeSkills[] = [
   {
     skill: "TypeScript",
     image: "https://camo.githubusercontent.com/34597c8135ed2d68f6dead5b7565c74d77946f6b199f7472661d54677c58a24a/68747470733a2f2f736b696c6c69636f6e732e6465762f69636f6e733f693d7473"
+  },
+  {
+    skill: "NodeJS",
+    image: "https://camo.githubusercontent.com/7d2502981f54a67b821893f32f9ae04884c4ae47bafe9dd26ae43563398cd599/68747470733a2f2f736b696c6c69636f6e732e6465762f69636f6e733f693d6e6f64656a73"
+  },
+  {
+    skill: "Laravel",
+    image: "https://camo.githubusercontent.com/c13b98c833933f68c7824fd047855dc5059276cb0ee54a743afe7a714bd23921/68747470733a2f2f736b696c6c69636f6e732e6465762f69636f6e733f693d6c61726176656c"
+  },
+  {
+    skill: "Express",
+    image: "https://camo.githubusercontent.com/4f38bde15cc741aaec976cfa6e7006f82777f427419c58405ccdfc921310ab52/68747470733a2f2f736b696c6c69636f6e732e6465762f69636f6e733f693d65787072657373"
+  },
+  {
+    skill: "NextJs",
+    image: "https://camo.githubusercontent.com/61135e092352a622c04c8564bc958cc757cc15909fb8499c01e6ab69d520da85/68747470733a2f2f736b696c6c69636f6e732e6465762f69636f6e733f693d6e6578746a73"
+  },
+  {
+    skill: "MySql",
+    image: "https://camo.githubusercontent.com/9bf95043af954f6a6fece35e50c932838ad1717f94edb4056322f3c26b5906c2/68747470733a2f2f736b696c6c69636f6e732e6465762f69636f6e733f693d6d7973716c"
+  },
+  {
+    skill: "Mongo DB",
+    image: "https://camo.githubusercontent.com/c0656fe26e0bd17784e371c880b6007a53afa88b8cc9e29f8d48f8b8c3ca5c95/68747470733a2f2f736b696c6c69636f6e732e6465762f69636f6e733f693d6d6f6e676f6462"
+  },
+  {
+    skill: "AWS",
+    image: "https://camo.githubusercontent.com/63e85f470a248cdf7598af5586c55175f94f3f9a19e96e2679ae915a555579d1/68747470733a2f2f736b696c6c69636f6e732e6465762f69636f6e733f693d617773"
+  },
+  {
+    skill: "Git",
+    image: "https://camo.githubusercontent.com/97355a4f48ed3fe5d9763f1d151b4b9716c0e444461c9b54512042336886ba7e/68747470733a2f2f736b696c6c69636f6e732e6465762f69636f6e733f693d676974"
   },
 ];
 

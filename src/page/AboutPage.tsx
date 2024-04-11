@@ -14,7 +14,7 @@ export const AboutPage = ({ title }: AboutPageProps) => {
       <section className='py-3'>
         <div className='text-light-gray font-light leading-6 pt-4 lg:pt-8'>
           <p className='mb-7 text-sm md:text-base'>
-            Full-Stack Developer with experience in building robust and scalable web applications. Passionate about technological innovation, I stay up-to-date with the latest trends and tools, enabling me to deliver cutting-edge and efficient solutions. My focus is on writing clean, modular, and easily maintainable code, following best programming practices.
+            Desarrollador Full-Stack con experiencia en la construcción de aplicaciones web robustas y escalables. Apasionado por la innovación tecnológica, me mantengo actualizado con las últimas tendencias y herramientas, lo que me permite entregar soluciones vanguardistas y eficientes. Mi atención se centra en escribir código limpio, modular y fácil de mantener, siguiendo las mejores prácticas de programación.
           </p>
         </div>
       </section>
@@ -30,7 +30,7 @@ export const AboutPage = ({ title }: AboutPageProps) => {
       </section>
       <section className='py-3'>
         <h3 className='text-white-two capitalize font-semibold text-xl md:text-2xl'>My Skills</h3>
-        <div className='w-full flex items-center justify-center my-10'>
+        <div className='w-full h-auto flex items-center justify-center gap-y-5 flex-wrap my-10'>
           {
             skills.map((item, key) => (
               <Tooltip key={key} message={item.skill}>
