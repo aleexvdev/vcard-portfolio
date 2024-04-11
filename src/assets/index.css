@@ -32,7 +32,7 @@ main { margin-bottom: 60px; }
     hsl(240, 1%, 25%) 3%, 
     hsl(0, 0%, 19%) 97%
   );
-  border-radius: 30px;
+  border-radius: 22px;
 }
 
 .timeline-item { position: relative; }

@@ -34,8 +34,8 @@ export const CardAbout = ({ props }: CardAboutProps) => {
           { iconService(service) }
         </div>
         <div className='w-full flex flex-col items-start text-left'>
-          <h4 className='text-white-two font-medium capitalize text-xl mb-2'>{service}</h4>
-          <p className='text-light-gray-70 leading-6 font-light text-sm'>{description}</p>
+          <h4 className='text-white-two font-medium capitalize text-base mb-2'>{service}</h4>
+          <p className='text-light-gray-70 leading-6 font-light text-xs'>{description}</p>
         </div>
       </div>
     </div>

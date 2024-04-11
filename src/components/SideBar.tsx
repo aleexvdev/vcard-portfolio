@@ -22,34 +22,40 @@ export const SideBar = () => {
     >
       <div className="w-full h-full">
         <button 
-          className="absolute top-0 right-0 bg-black-one p-2 md:px-7 md:py-3 rounded-tr-3xl rounded-bl-3xl shadow-md lg:hidden"
+          className="absolute top-0 right-0 bg-black-one p-1.5 md:px-7 md:py-3 rounded-tr-3xl rounded-bl-3xl shadow-md lg:hidden"
           onClick={() => setIsShowContact(!isShowContact)}
         >
-          <IoIosArrowDown className="w-7 h-7 text-orange-yellow-crayola block md:hidden" />
+          <IoIosArrowDown className="w-6 h-6 text-orange-yellow-crayola block md:hidden" />
           <span className="capitalize text-orange-yellow-crayola hidden md:block">Show contact</span>
         </button>
-        <div className="w-full flex lg:flex-col items-center justify-center p-5 md:px-10 md:py-5 lg:pt-16 lg:py-0">
+        <div className="w-full h-full flex lg:flex-col items-center justify-center gap-3 p-2 md:px-10 md:py-5 lg:pt-16 lg:py-0">
           <figure className="avatar-box">
             <img
               src={"/assets/images/profile.png"}
               alt=""
-              className="w-80 md:w-52 lg:w-36"
+              className="w-40 md:w-52 lg:w-36"
             />
           </figure>
-          <div className="w-full h-full flex flex-col items-start justify-start lg:items-center lg:justify-center lg:mt-5 ml-4 md:ml-8 lg:ml-0">
-            <h1 className="text-white-two text-2xl font-medium md:whitespace-nowrap md:text-center my-2 md:mb-2 lg:mb-4 lg:mt-0">
-              Alexander Valverde
-            </h1>
-            <p className="bg-black-two rounded-lg text-white-one text-sm font-light px-3 py-2 w-max my-2 md:mb-2 lg:mb-4 lg:mx-auto lg:mt-0">
-              Full Stack Developer
-            </p>
-            <ul className="w-full flex items-start justify-start lg:items-center lg:justify-center gap-4 py-2">
-              {
-                socials.map( (social) => (
-                  <BtnSocial key={social.id} props={social} />
-                ))
-              }
-            </ul>
+          <div className="w-full h-full flex flex-col items-center justify-center lg:items-center lg:justify-center lg:mt-5">
+            <div className="w-full text-left">
+              <h1 className="text-white-two text-base lg:text-2xl font-medium md:whitespace-nowrap md:text-center mb-1 md:mb-2 lg:mb-4 lg:mt-0">
+                Alexander Valverde
+              </h1>
+            </div>
+            <div className="w-full text-left">
+              <p className="bg-black-two rounded-lg text-white-one text-xs font-light px-3 py-2 w-max mb-2 md:mb-2 lg:mb-4 lg:mx-auto lg:mt-0">
+                Full Stack Developer
+              </p>
+            </div>
+            <div className="w-full text-left">
+              <ul className="w-full flex items-start justify-start lg:items-center lg:justify-center gap-4">
+                {
+                  socials.map( (social) => (
+                    <BtnSocial key={social.id} props={social} />
+                  ))
+                }
+              </ul>
+            </div>
           </div>
         </div>
         <div className={`w-full h-full px-5 md:px-10 lg:px-8 lg:block ${isShowContact ? 'block' : 'hidden' }`}>

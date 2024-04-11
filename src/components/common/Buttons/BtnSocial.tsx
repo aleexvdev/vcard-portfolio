@@ -11,13 +11,13 @@ interface BtnSocialProps {
 const iconCategory = (social: string) => {
   switch (social) {
     case 'Facebook':
-      return <MdFacebook className='w-7 h-7 text-light-gray-70 bg-transparent hover:text-light-gray' />
+      return <MdFacebook className='w-6 h-6 text-light-gray-70 bg-transparent hover:text-light-gray' />
     case 'Instagram':
-      return <FaInstagram className='w-7 h-7 text-light-gray-70 bg-transparent hover:text-light-gray' />
+      return <FaInstagram className='w-6 h-6 text-light-gray-70 bg-transparent hover:text-light-gray' />
     case 'LinkedIn':
-      return <FaLinkedin className='w-7 h-7 text-light-gray-70 bg-transparent hover:text-light-gray' />
+      return <FaLinkedin className='w-6 h-6 text-light-gray-70 bg-transparent hover:text-light-gray' />
     case 'Github':
-      return <FaGithub className='w-7 h-7 text-light-gray-70 bg-transparent hover:text-light-gray' />
+      return <FaGithub className='w-6 h-6 text-light-gray-70 bg-transparent hover:text-light-gray' />
     default:
       return '';
   }

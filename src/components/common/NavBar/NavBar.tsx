@@ -32,8 +32,8 @@ export const NavBar = ({ handleTitle }: NavBarProps) => {
           }
         </div>
       </nav>
-      <nav className="fixed bottom-0 left-0 z-50 w-full bg-black-two h-16 rounded-t-3xl border border-t-0 border-black-one block lg:hidden">
-        <div className="w-full h-full flex items-center justify-center lg:justify-between gap-1 md:gap-5 px-1 md:px-12">
+      <nav className="fixed bottom-0 left-0 z-50 w-full bg-black-two h-14 rounded-t-xl border border-t-0 border-black-one block lg:hidden">
+        <div className="w-full h-full flex items-center justify-center lg:justify-between gap-3 md:gap-5 px-1 md:px-12">
           {
             navs.map((nav, index) => (
               <button
@@ -43,7 +43,7 @@ export const NavBar = ({ handleTitle }: NavBarProps) => {
                 }`}
                 onClick={() => handleNavActive(nav.path)}
               >
-                <span className="px-3 text-base md:text-xl">{nav.path}</span>
+                <span className="text-xs md:text-xl">{nav.path}</span>
               </button>
             ))
           }
@@ -51,23 +51,4 @@ export const NavBar = ({ handleTitle }: NavBarProps) => {
       </nav>
     </>
   );
-  /* return (
-    <nav className='fixed bottom-0 left-0 z-50 w-full bg-black-two h-16 rounded-t-3xl'>
-      <div className="w-full h-full flex items-center justify-center gap-5">
-        {
-          navs.map((nav, index) => (
-            <button
-              key={index}
-              className={`font-medium ${
-                activeNav === nav.path ? 'text-orange-yellow-crayola' : 'text-light-gray hover:text-light-gray-70'
-              }`}
-              onClick={() => handleNavActive(nav.path)}
-            >
-              <span className="px-3 text-lg">{nav.path}</span>
-            </button>
-          ))
-        }
-      </div>
-    </nav>
-  ); */
 };
