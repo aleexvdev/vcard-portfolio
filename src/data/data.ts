@@ -2,15 +2,15 @@ import { TypeEducation, TypeProjects, TypeServices, TypeSkills } from "../types/
 
 export const services: TypeServices[] = [
   {
-    service: "Frontend Develop",
+    service: "Frontend Development",
     description: "High-quality development of sites at the professional level.",
   },
   {
-    service: "Backend Develop",
+    service: "Backend Development",
     description: "High-quality development of sites at the professional level.",
   },
   {
-    service: "Mobile App Development",
+    service: "Mobile Development",
     description: "Professional development of applications for iOS and Android.",
   },
   {

@@ -23,7 +23,7 @@ function App() {
 
   return (
     <main className="w-full h-full min-h-screen mx-auto max-w-6xl relative overflow-hidden">
-      <div className="w-full h-full flex md:flex-col lg:flex-row items-start justify-start gap-6 pt-16 px-10 lg:px-0">
+      <div className="w-full h-full flex flex-col lg:flex-row items-start justify-start gap-6 pt-16 px-3 md:px-10 lg:px-0">
         <SideBar />
         <article 
           className="w-full min-h-96 bg-black-main-two rounded-3xl mb-0 relative z-50 border border-black-one" 

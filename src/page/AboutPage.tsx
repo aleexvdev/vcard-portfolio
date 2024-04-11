@@ -20,7 +20,7 @@ export const AboutPage = ({ title }: AboutPageProps) => {
       </section>
       <section className='py-3'>
         <h3 className='text-white-two capitalize font-semibold text-2xl'>What I'm doing</h3>
-        <div className='py-5 w-full grid grid-cols-2 gap-5'>
+        <div className='py-5 w-full grid grid-cols-1 lg:grid-cols-2 gap-5'>
           {
             services.map((item, key) => (
               <CardAbout key={key} props={item} />
