@@ -1,14 +1,40 @@
 import { BsFillSendFill } from 'react-icons/bs';
 import { Header } from '../components/common/Header/Header'
+import { useState } from 'react';
 
 interface ContactPageProps {
   title: string;
 }
 
+interface FormData {
+  name: string;
+  email: string;
+  message: string;
+}
+
 export const ContactPage = ({ title }: ContactPageProps) => {
 
+  const [formData, setFormData] = useState<FormData>({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = event.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    console.log(formData);
+  };
+
   return (
-    <article className='py-5 px-2 md:px-6'>
+    <article className='py-3 lg:py-5 px-2 md:px-6'>
       <Header title={title} />
       <section className='pt-10 pb-2'>
         <div className='mapbox h-96'>
@@ -20,36 +46,46 @@ export const ContactPage = ({ title }: ContactPageProps) => {
       <section className='w-full'>
         <h3 className='text-white-two capitalize font-semibold text-2xl'>Contact Form</h3>
         <div className='py-5 w-full'>
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className='w-full grid grid-cols-1 md:grid-cols-2 gap-5 mb-5'>
               <div>
                 <input
                   type="text"
-                  className="w-full h-14 rounded-xl text-white-two font-normal outline-none px-5 text-lg border border-black-one bg-transparent"
+                  className="w-full h-14 rounded-xl text-white-two font-normal outline-none px-5 text-sm border border-black-one bg-transparent"
                   name="name"
                   id="name"
-                  value={""}
+                  value={formData.name}
                   placeholder='Full Name'
                   autoComplete='off'
+                  onChange={handleInputChange}
                 />
               </div>
               <div>
                 <input
                   type="email"
-                  className="w-full h-14 rounded-xl text-white-two font-normal outline-none px-5 text-lg border border-black-one bg-transparent"
+                  className="w-full h-14 rounded-xl text-white-two font-normal outline-none px-5 text-sm border border-black-one bg-transparent"
                   name="email"
                   id="email"
-                  value={""}
+                  value={formData.email}
                   placeholder='Email address'
                   autoComplete='off'
+                  onChange={handleInputChange}
                 />
               </div>
             </div>
-            <textarea name="" id="" className='resize-none min-h-32 text-white-two font-normal outline-none w-full rounded-xl text-lg border border-black-one bg-transparent p-5' placeholder='Your Message'></textarea>
+            <textarea 
+              name="message" 
+              id="message" 
+              className='resize-none min-h-40 text-white-two font-normal outline-none w-full rounded-xl text-sm border border-black-one bg-transparent p-5' 
+              placeholder='Your Message'
+              onChange={handleInputChange}
+            >
+              {formData.message}
+            </textarea>
             <div className='w-full flex items-center justify-end mt-5'>
               <button type='submit' className='flex items-center justify-center px-5 shadow-sm shadow-black-main-one rounded-xl py-3 gap-3 bg-black-two hover:bg-black-one'>
-                <BsFillSendFill className='w-5 h-5 text-orange-yellow-crayola' /> 
-                <span className='text-orange-yellow-crayola text-lg capitalize'>Send Message</span>
+                <BsFillSendFill className='w-6 h-6 text-orange-yellow-crayola' /> 
+                <span className='text-orange-yellow-crayola text-sm capitalize'>Send Message</span>
               </button>
             </div>
           </form>

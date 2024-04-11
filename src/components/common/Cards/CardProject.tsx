@@ -11,13 +11,13 @@ export const CardProject = ({ props }: CardProjectProps) => {
         <img src={`/assets/projects/${props.image}.png`} alt={props.name} className="object-cover w-full h-52 rounded-xl" />
       </figure>
       <div className="px-3 py-3">
-        <h3 className="text-white-two font-medium capitalize text-xl mb-1">{props.name}</h3>
-        <p className="text-light-gray-70 font-normal capitalize text-base">{props.category}</p>
+        <h3 className="text-white-two font-medium capitalize text-lg mb-1">{props.name}</h3>
+        <p className="text-light-gray-70 font-normal capitalize text-sm">{props.category}</p>
       </div>
-      <div className="w-full flex items-center justify-start gap-3 px-3 py-2 flex-wrap">
+      <div className="w-full flex items-center justify-start gap-2 px-3 py-2 flex-wrap">
         {
           props.tags.map((item, key) => (
-            <span key={key} className="text-light-gray text-sm rounded-lg bg-black-one px-3 py-1 hover:bg-black-two select-none">{item}</span>
+            <span key={key} className="text-light-gray text-xs rounded-lg bg-black-one px-3 py-1 hover:bg-black-two select-none">{item}</span>
           ))
         }
       </div>

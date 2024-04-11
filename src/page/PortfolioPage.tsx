@@ -32,7 +32,7 @@ export const PortfolioPage = ({ title }: PortfolioPageProps) => {
   );
 
   return (
-    <article className='py-5 px-2 md:px-6'>
+    <article className='py-3 lg:py-5 px-2 md:px-6'>
       <Header title={title} />
       <section className='py-3'>
         <div className='hidden md:block'>
@@ -47,7 +47,7 @@ export const PortfolioPage = ({ title }: PortfolioPageProps) => {
         <div className='block md:hidden '>
           <div className='w-full my-5 relative mb-6'>
             <button className='w-full flex items-center justify-between rounded-xl border border-light-gray-70 px-5 py-3' onClick={showFilterList}>
-              <span className="text-light-gray font-medium text-xl transition-colors">{isFilterActive}</span>
+              <span className="text-light-gray font-medium text-sm transition-colors">{isFilterActive}</span>
               <IoIosArrowDown className='text-light-gray w-6 h-6' />
             </button>
             {
@@ -57,7 +57,7 @@ export const PortfolioPage = ({ title }: PortfolioPageProps) => {
                   filterProjects.map((item, key) => (
                     <button 
                       key={key} 
-                      className="text-light-gray font-light text-lg transition-colors w-full text-left hover:bg-black-two px-4 py-3 rounded-lg"
+                      className="text-light-gray font-light text-sm transition-colors w-full text-left hover:bg-black-two px-4 py-3 rounded-lg"
                       onClick={() => handleFilterProject(item)}
                     >
                       {item}
