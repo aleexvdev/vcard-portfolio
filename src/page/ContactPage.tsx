@@ -8,7 +8,7 @@ interface ContactPageProps {
 export const ContactPage = ({ title }: ContactPageProps) => {
 
   return (
-    <article className='py-5 px-6'>
+    <article className='py-5 px-2 md:px-6'>
       <Header title={title} />
       <section className='pt-10 pb-2'>
         <div className='mapbox h-96'>
@@ -21,7 +21,7 @@ export const ContactPage = ({ title }: ContactPageProps) => {
         <h3 className='text-white-two capitalize font-semibold text-2xl'>Contact Form</h3>
         <div className='py-5 w-full'>
           <form>
-            <div className='w-full grid grid-cols-2 gap-5 mb-5'>
+            <div className='w-full grid grid-cols-1 md:grid-cols-2 gap-5 mb-5'>
               <div>
                 <input
                   type="text"
