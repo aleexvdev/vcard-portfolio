@@ -44,14 +44,14 @@ export const ContactPage = ({ title }: ContactPageProps) => {
         </div>
       </section>
       <section className='w-full'>
-        <h3 className='text-white-two capitalize font-semibold text-2xl'>Contact Form</h3>
+        <h3 className='text-white-two capitalize font-semibold text-xl lg:text-2xl'>Contact Form</h3>
         <div className='py-5 w-full'>
           <form onSubmit={handleSubmit}>
             <div className='w-full grid grid-cols-1 md:grid-cols-2 gap-5 mb-5'>
               <div>
                 <input
                   type="text"
-                  className="w-full h-14 rounded-xl text-white-two font-normal outline-none px-5 text-sm border border-black-one bg-transparent"
+                  className="w-full h-14 rounded-xl text-white-two font-normal outline-none px-5 text-sm lg:text-base border border-black-one bg-transparent"
                   name="name"
                   id="name"
                   value={formData.name}
@@ -63,7 +63,7 @@ export const ContactPage = ({ title }: ContactPageProps) => {
               <div>
                 <input
                   type="email"
-                  className="w-full h-14 rounded-xl text-white-two font-normal outline-none px-5 text-sm border border-black-one bg-transparent"
+                  className="w-full h-14 rounded-xl text-white-two font-normal outline-none px-5 text-sm lg:text-base border border-black-one bg-transparent"
                   name="email"
                   id="email"
                   value={formData.email}
@@ -76,7 +76,7 @@ export const ContactPage = ({ title }: ContactPageProps) => {
             <textarea 
               name="message" 
               id="message" 
-              className='resize-none min-h-40 text-white-two font-normal outline-none w-full rounded-xl text-sm border border-black-one bg-transparent p-5' 
+              className='resize-none min-h-40 text-white-two font-normal outline-none w-full rounded-xl text-sm lg:text-base border border-black-one bg-transparent p-5' 
               placeholder='Your Message'
               onChange={handleInputChange}
             >

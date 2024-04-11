@@ -39,7 +39,7 @@ export const PortfolioPage = ({ title }: PortfolioPageProps) => {
           <div className='w-full flex items-center justify-start gap-6 my-5'>
             {
               filterProjects.map((item, key) => (
-                <button key={key} className={`font-medium lg:text-base ${isFilterActive === item ? 'text-orange-yellow-crayola' : 'text-light-gray'} text-2xl transition-colors`} onClick={() => handleFilterProject(item)}>{item}</button>
+                <button key={key} className={`font-medium ${isFilterActive === item ? 'text-orange-yellow-crayola' : 'text-light-gray'} text-base lg:text-lg transition-colors`} onClick={() => handleFilterProject(item)}>{item}</button>
               ))
             }
           </div>
