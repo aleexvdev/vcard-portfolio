@@ -16,7 +16,7 @@ export const SideBar = () => {
 
   return (
     <div 
-      className="sticky w-full lg:w-auto h-full bg-black-main-two rounded-3xl mb-0 z-40 border border-black-one"
+      className="sticky w-full lg:w-auto h-full bg-black-main-two rounded-3xl mb-0 z-50 border border-black-one"
       style={{ 
         boxShadow: "0 24px 80px hsla(0, 0%, 0%, 0.25)" 
       }}

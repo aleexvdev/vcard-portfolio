@@ -30,7 +30,7 @@ export const education: TypeEducation[] = [
 export const experience: TypeEducation[] = [
   {
     place: "Softnet SPA",
-    period: "Desarrollador Full-Stack | Enero 2021 – ACTUALIDAD",
+    period: "Desarrollador Full-Stack | Enero 2022 – ACTUALIDAD",
     description: "Haciendo uso de PHP, Laravel, JQuery, JavaScript, HTML y Bootstrap, brindo soporte para el ERP de facturación electrónica, desarrollando e implementando nuevas funcionalidades en el ERP para mejorar la experiencia del usuario y la eficiencia operativa, asegurando la estabilidad y el rendimiento del sistema. Mantenimiento proactivo del código base y seguimiento de las mejores prácticas de programación. Contribución activa en reuniones de planificación y revisión de módulos para asegurar la alineación con los objetivos empresariales."
   },
   {
@@ -91,7 +91,7 @@ export const skills: TypeSkills[] = [
     image: "https://camo.githubusercontent.com/9bf95043af954f6a6fece35e50c932838ad1717f94edb4056322f3c26b5906c2/68747470733a2f2f736b696c6c69636f6e732e6465762f69636f6e733f693d6d7973716c"
   },
   {
-    skill: "Mongo DB",
+    skill: "MongoDB",
     image: "https://camo.githubusercontent.com/c0656fe26e0bd17784e371c880b6007a53afa88b8cc9e29f8d48f8b8c3ca5c95/68747470733a2f2f736b696c6c69636f6e732e6465762f69636f6e733f693d6d6f6e676f6462"
   },
   {
@@ -110,7 +110,7 @@ export const projects: TypeProjects[] = [
     category: "Web development",
     image: "todoapp",
     repository: "https://github.com/aleexvdev/app-todolist",
-    url: "https://weatherapp-alexvdev.netlify.app/",
+    url: "https://alexvdev-todolist.netlify.app/",
     tags: [
       "ReactJS",
       "Tailwind CSS",
@@ -122,7 +122,7 @@ export const projects: TypeProjects[] = [
     category: "Web development",
     image: "weather",
     repository: "https://github.com/aleexvdev/weather-app",
-    url: "https://alexvalverde666.github.io/todo-app/",
+    url: "https://weatherapp-alexvdev.netlify.app/",
     tags: [
       "ReactJS",
       "Tailwind CSS",

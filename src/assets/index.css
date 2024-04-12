@@ -88,3 +88,22 @@ main { margin-bottom: 60px; }
   border: none;
   filter: grayscale(1) invert(1);
 }
+
+.project-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .image {
+  transform: scale(1.1);
+}
+
+.project-card:hover .hover-links {
+  opacity: 1;
+  z-index: 999;
+}

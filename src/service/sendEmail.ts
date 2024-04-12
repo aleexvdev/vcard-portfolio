@@ -15,9 +15,10 @@ export const sendEmail = async (body: FormData) => {
       message: body.message,
     };
     const emailjsSend = await emailjs.send(
-      'service_4l0dhj5',
-      'template_7pgmzyh',
-      dataToSend,'FxnI-nRC2aLUqth9D'
+      import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+      dataToSend,
+      import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
     );
 
   
