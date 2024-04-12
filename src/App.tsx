@@ -8,6 +8,7 @@ import { ContactPage } from "./page/ContactPage";
 
 function App() {
 
+  // const [isLoading, setIsLoading] = useState<boolean>(true);
   const [currentPage, setCurrentPage] = useState<string>("About");
 
   const pageComponents: { [key: string]: React.ReactNode } = {

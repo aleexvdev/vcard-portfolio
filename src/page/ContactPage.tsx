@@ -1,8 +1,9 @@
 import { useForm } from 'react-hook-form';
+import { useEffect, useState } from 'react';
+import { sendEmail } from '../service/sendEmail';
+import { motion } from 'framer-motion';
 import { BsFillSendFill } from 'react-icons/bs';
 import { Header } from '../components/common/Header/Header';
-import { sendEmail } from '../service/sendEmail';
-import { useEffect } from 'react';
 
 interface ContactPageProps {
   title: string;
@@ -22,19 +23,32 @@ export const ContactPage = ({ title }: ContactPageProps) => {
     formState: { errors },
     reset
   } = useForm<FormData>();
+  const [isMessageSuccess, setMessageSuccess] = useState<boolean>(false);
 
   useEffect(() => {
 		window.scrollTo({ top: 0, behavior: 'smooth' });
 	}, []);
 
+  useEffect(() => {
+    if (isMessageSuccess) {
+      const timer = setTimeout(() => {
+        setMessageSuccess(false);
+      }, 3000);
+  
+      return () => clearTimeout(timer);
+    }
+  }, [isMessageSuccess]);
+
   const onSubmit = async (data: FormData) => {
     const { error, success } = await sendEmail(data);
     if (success) {
+      setMessageSuccess(true);
       reset();
     } else {
       console.error(error)
     }
   };
+
 
   return (
     <article className='py-3 lg:py-5 px-2 md:px-6'>
@@ -87,7 +101,17 @@ export const ContactPage = ({ title }: ContactPageProps) => {
               {...register('message', { required: '** Message is required.' })}
             />
             {errors.message && <span className='text-light-gray-70 text-sm md:text-base font-light'>{errors.message.message}</span>}
-            <div className='w-full flex items-center justify-end mt-5'>
+            <div className='w-full flex items-center justify-end mt-5 relative'>
+              { isMessageSuccess && 
+                <motion.span
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: isMessageSuccess ? 1 : 0, y: isMessageSuccess ? 0 : -10 }}
+                  transition={{ duration: 0.5, ease: 'easeInOut' }}
+                  className="absolute left-0 text-sm md:text-lg capitalize text-orange-yellow-crayola font-medium"
+                >
+                  ¡Message sent!
+                </motion.span>
+              }
               <button type='submit' className='flex items-center justify-center px-5 shadow-sm shadow-black-main-one rounded-xl py-3 gap-3 bg-black-two hover:bg-black-one'>
                 <BsFillSendFill className='w-6 h-6 text-orange-yellow-crayola' /> 
                 <span className='text-orange-yellow-crayola text-sm md:text-base capitalize'>Send Message</span>
