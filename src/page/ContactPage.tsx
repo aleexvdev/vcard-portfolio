@@ -1,54 +1,20 @@
-import { useForm } from 'react-hook-form';
-import { useEffect, useState } from 'react';
-import { sendEmail } from '../service/sendEmail';
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { BsFillSendFill } from 'react-icons/bs';
 import { Header } from '../components/common/Header/Header';
+import { BsFillSendFill } from 'react-icons/bs';
+import { useContactForm } from '../hooks/useContactForm';
 
 interface ContactPageProps {
   title: string;
 }
 
-interface FormData {
-  name: string;
-  email: string;
-  message: string;
-}
-
 export const ContactPage = ({ title }: ContactPageProps) => {
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-    reset
-  } = useForm<FormData>();
-  const [isMessageSuccess, setMessageSuccess] = useState<boolean>(false);
+  const { register, handleSubmit, errors, isMessageSuccess, onSubmit } = useContactForm();
 
   useEffect(() => {
 		window.scrollTo({ top: 0, behavior: 'smooth' });
 	}, []);
-
-  useEffect(() => {
-    if (isMessageSuccess) {
-      const timer = setTimeout(() => {
-        setMessageSuccess(false);
-      }, 3000);
-  
-      return () => clearTimeout(timer);
-    }
-  }, [isMessageSuccess]);
-
-  const onSubmit = async (data: FormData) => {
-    const { error, success } = await sendEmail(data);
-    if (success) {
-      setMessageSuccess(true);
-      reset();
-    } else {
-      console.error(error)
-    }
-  };
-
 
   return (
     <article className='py-3 lg:py-5 px-2 md:px-6'>
