@@ -7,6 +7,7 @@ import { BtnSocial } from "./common/Buttons/BtnSocial";
 import { Tooltip } from "./common/Tooltip/Tooltip";
 import { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 
 export const SideBar = () => {
@@ -87,10 +88,12 @@ export const SideBar = () => {
             </Tooltip>
           </div>
           <div className="w-full flex items-center justify-center mt-8 mb-3 md:mb-6">
-            <button className="flex items-center justify-center px-5 shadow-sm shadow-black-main-one rounded-xl py-3 gap-3 bg-black-two hover:bg-black-one">
-              <MdOutlineFileDownload className="w-6 h-6 text-orange-yellow-crayola" />
-              <span className="text-orange-yellow-crayola text-sm md:text-base">Download CV</span>
-            </button>
+            <Link to={'/assets/docs/curriculum-alor-valverde.pdf'} target="_blank">
+              <button className="flex items-center justify-center px-5 shadow-sm shadow-black-main-one rounded-xl py-3 gap-3 bg-black-two hover:bg-black-one">
+                <MdOutlineFileDownload className="w-6 h-6 text-orange-yellow-crayola" />
+                <span className="text-orange-yellow-crayola text-sm md:text-base">Download CV</span>
+              </button>
+            </Link>
           </div>
         </div>
       </div>

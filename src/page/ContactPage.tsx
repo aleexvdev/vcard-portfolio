@@ -1,6 +1,7 @@
+import { useForm } from 'react-hook-form';
 import { BsFillSendFill } from 'react-icons/bs';
-import { Header } from '../components/common/Header/Header'
-import { useState } from 'react';
+import { Header } from '../components/common/Header/Header';
+import { sendEmail } from '../service/sendEmail';
 
 interface ContactPageProps {
   title: string;
@@ -14,23 +15,41 @@ interface FormData {
 
 export const ContactPage = ({ title }: ContactPageProps) => {
 
-  const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    message: ''
-  });
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset
+  } = useForm<FormData>();
 
-  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = event.target;
-    setFormData((prevState) => ({
-      ...prevState,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    console.log(formData);
+  const onSubmit = async (data: FormData) => {
+    const { error, success } = await sendEmail(data);
+    if (success) {
+      console.log(success)
+      reset();
+    } else {
+      console.log(error)
+    }
+    /* emailjs
+    .send(
+      process.env.VITE_APP_EMAILJS_SERVICE_ID ? process.env.VITE_APP_EMAILJS_SERVICE_ID : "",
+      process.env.VITE_APP_EMAILJS_TEMPLATE_ID ? process.env.VITE_APP_EMAILJS_TEMPLATE_ID : "", 
+      dataToSend
+    )
+    .then(
+      () => {
+        reset({
+          name: '',
+          email: '',
+          message: '',
+        });
+      }
+    )
+    .catch(
+      (error) => {
+        console.log(error.text);
+      }
+    ); */
   };
 
   return (
@@ -46,42 +65,44 @@ export const ContactPage = ({ title }: ContactPageProps) => {
       <section className='w-full'>
         <h3 className='text-white-two capitalize font-semibold text-xl md:text-2xl'>Contact Form</h3>
         <div className='py-5 w-full'>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit(onSubmit)}>
             <div className='w-full grid grid-cols-1 md:grid-cols-2 gap-5 mb-5'>
               <div>
                 <input
                   type="text"
                   className="w-full h-14 rounded-xl text-white-two font-normal outline-none px-5 text-sm md:text-base border border-black-one bg-transparent"
-                  name="name"
                   id="name"
-                  value={formData.name}
                   placeholder='Full Name'
                   autoComplete='off'
-                  onChange={handleInputChange}
+                  {...register('name', { required: '** Full Name is required.' })}
                 />
+                {errors.name && <span className='text-light-gray-70 text-sm md:text-base font-light'>{errors.name.message}</span>}
               </div>
               <div>
                 <input
                   type="email"
                   className="w-full h-14 rounded-xl text-white-two font-normal outline-none px-5 text-sm md:text-base border border-black-one bg-transparent"
-                  name="email"
                   id="email"
-                  value={formData.email}
                   placeholder='Email address'
                   autoComplete='off'
-                  onChange={handleInputChange}
+                  {...register('email', {
+                    required: '** Email is required.',
+                    pattern: {
+                      value: /\S+@\S+\.\S+/,
+                      message: '** Write a valid email.',
+                    },
+                  })}
                 />
+                {errors.email && <span className='text-light-gray-70 text-sm md:text-base font-light'>{errors.email.message}</span>}
               </div>
             </div>
             <textarea 
-              name="message" 
               id="message" 
               className='resize-none min-h-40 text-white-two font-normal outline-none w-full rounded-xl text-sm md:text-base border border-black-one bg-transparent p-5' 
               placeholder='Your Message'
-              onChange={handleInputChange}
-            >
-              {formData.message}
-            </textarea>
+              {...register('message', { required: '** Message is required.' })}
+            />
+            {errors.message && <span className='text-light-gray-70 text-sm md:text-base font-light'>{errors.message.message}</span>}
             <div className='w-full flex items-center justify-end mt-5'>
               <button type='submit' className='flex items-center justify-center px-5 shadow-sm shadow-black-main-one rounded-xl py-3 gap-3 bg-black-two hover:bg-black-one'>
                 <BsFillSendFill className='w-6 h-6 text-orange-yellow-crayola' /> 

@@ -43,7 +43,7 @@ export const NavBar = ({ handleTitle }: NavBarProps) => {
                 }`}
                 onClick={() => handleNavActive(nav.path)}
               >
-                <span className="text-xs md:text-xl">{nav.path}</span>
+                <span className="text-xs md:text-base">{nav.path}</span>
               </button>
             ))
           }
