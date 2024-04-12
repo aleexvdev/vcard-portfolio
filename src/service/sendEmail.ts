@@ -21,6 +21,7 @@ export const sendEmail = async (body: FormData) => {
       import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
     );
 
+  
     if (emailjsSend) {
       return { error: false, success: true, message: emailjsSend.text, status: emailjsSend.status };
     } else {
