@@ -1,6 +1,5 @@
 import { MdOutlineFileDownload } from "react-icons/md";
 import { CiCalendar, CiLocationOn } from "react-icons/ci";
-import { BsPhone } from "react-icons/bs";
 import { PiAt } from "react-icons/pi";
 import { socials } from "../data/socials";
 import { BtnSocial } from "./common/Buttons/BtnSocial";
@@ -8,6 +7,7 @@ import { Tooltip } from "./common/Tooltip/Tooltip";
 import { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { FaUserGraduate } from "react-icons/fa";
 
 
 export const SideBar = () => {
@@ -62,10 +62,10 @@ export const SideBar = () => {
         <div className={`w-full h-full px-5 md:px-10 lg:px-8 lg:block ${isShowContact ? 'block' : 'hidden' }`}>
           <div className="w-full h-[1px] mt-4 mb-6 bg-black-one"></div>
           <div className="w-full h-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-y-5 px-0 lg:px-0">
-            <Tooltip message="Birthday">
+            <Tooltip message="Profession">
               <div className="w-full flex items-center justify-start lg:justify-start gap-2">
-                <CiCalendar className="w-6 h-6 text-orange-yellow-crayola" />
-                <p className="text-white-two font-light text-sm md:text-base lg:text-sm">January 06</p>
+                <FaUserGraduate className="w-6 h-6 text-orange-yellow-crayola" />
+                <p className="text-white-two font-light text-sm md:text-base lg:text-sm">Bach. Ingeniería Informática</p>
               </div>
             </Tooltip>
             <Tooltip message="E-mail">
@@ -74,12 +74,12 @@ export const SideBar = () => {
                 <p className="text-white-two font-light text-sm md:text-base lg:text-sm" data-toggle="tooltip" data-original-title="Phone" data-placement="top">valverdealex25@gmail.com</p>
               </div>
             </Tooltip>
-            <Tooltip message="Phone">
+            <Tooltip message="Birthday">
               <div className="w-full flex items-center justify-start lg:justify-start gap-2">
-                <BsPhone className="w-6 h-6 text-orange-yellow-crayola" />
-                <p className="text-white-two font-light text-sm md:text-base lg:text-sm">+51 968 702 950</p>
+                <CiCalendar className="w-6 h-6 text-orange-yellow-crayola" />
+                <p className="text-white-two font-light text-sm md:text-base lg:text-sm">January 06</p>
               </div>
-            </Tooltip>
+            </Tooltip>            
             <Tooltip message="Location">
               <div className="w-full flex items-center justify-start lg:justify-start gap-2">
                 <CiLocationOn className="w-6 h-6 text-orange-yellow-crayola" />
