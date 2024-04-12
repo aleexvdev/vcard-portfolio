@@ -2,12 +2,18 @@ import { Header } from '../components/common/Header/Header'
 import { education, experience } from '../data/data';
 import { ListResume } from '../components/common/List/ListResume';
 import { PiBriefcase, PiGraduationCapFill } from 'react-icons/pi';
+import { useEffect } from 'react';
 
 interface ResumePageProps {
   title: string;
 }
 
 export const ResumePage = ({ title }: ResumePageProps) => {
+
+  useEffect(() => {
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	}, []);
+
   return (
     <article className='py-3 lg:py-5 px-2 md:px-6'>
       <Header title={title} />

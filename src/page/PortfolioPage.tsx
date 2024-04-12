@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { CardProject } from '../components/common/Cards/CardProject';
 import { Header } from '../components/common/Header/Header'
 import { projects } from '../data/data';
@@ -13,6 +13,10 @@ export const PortfolioPage = ({ title }: PortfolioPageProps) => {
 
   const [isFilterActive, setIsFilterActive] = useState<string>('All');
   const [isActiveList, setIsActiveList] = useState<boolean>(false);
+
+  useEffect(() => {
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	}, []);
 
   const handleFilterProject = (filter: string) => {
     setIsFilterActive(filter);

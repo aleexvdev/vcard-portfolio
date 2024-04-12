@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { CardAbout } from '../components/common/Cards/CardAbout';
 import { Header } from '../components/common/Header/Header';
 import { Tooltip } from '../components/common/Tooltip/Tooltip';
@@ -8,6 +9,11 @@ interface AboutPageProps {
 }
 
 export const AboutPage = ({ title }: AboutPageProps) => {
+
+  useEffect(() => {
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	}, []);
+
   return (
     <article className='py-3 lg:py-5 px-2 md:px-6'>
       <Header title={title} />

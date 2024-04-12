@@ -2,6 +2,7 @@ import { useForm } from 'react-hook-form';
 import { BsFillSendFill } from 'react-icons/bs';
 import { Header } from '../components/common/Header/Header';
 import { sendEmail } from '../service/sendEmail';
+import { useEffect } from 'react';
 
 interface ContactPageProps {
   title: string;
@@ -21,6 +22,10 @@ export const ContactPage = ({ title }: ContactPageProps) => {
     formState: { errors },
     reset
   } = useForm<FormData>();
+
+  useEffect(() => {
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	}, []);
 
   const onSubmit = async (data: FormData) => {
     const { error, success } = await sendEmail(data);
