@@ -25,10 +25,9 @@ export const ContactPage = ({ title }: ContactPageProps) => {
   const onSubmit = async (data: FormData) => {
     const { error, success } = await sendEmail(data);
     if (success) {
-      console.log(success)
       reset();
     } else {
-      console.log(error)
+      console.error(error)
     }
   };
 
