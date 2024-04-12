@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { CardProject } from '../components/common/Cards/CardProject';
 import { Header } from '../components/common/Header/Header'
 import { projects } from '../data/data';
@@ -13,9 +13,21 @@ export const PortfolioPage = ({ title }: PortfolioPageProps) => {
 
   const [isFilterActive, setIsFilterActive] = useState<string>('All');
   const [isActiveList, setIsActiveList] = useState<boolean>(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
 		window.scrollTo({ top: 0, behavior: 'smooth' });
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsActiveList(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
 	}, []);
 
   const handleFilterProject = (filter: string) => {
@@ -56,7 +68,7 @@ export const PortfolioPage = ({ title }: PortfolioPageProps) => {
             </button>
             {
               isActiveList &&
-              <div className='absolute top-12 left-0 w-full grid grid-cols-1 my-5 bg-black-main-two rounded-xl p-2 border border-light-gray-70'>
+              <div ref={dropdownRef} className='absolute top-12 left-0 w-full grid grid-cols-1 my-5 bg-black-main-two rounded-xl p-2 border border-light-gray-70 z-50'>
                 {
                   filterProjects.map((item, key) => (
                     <button 
